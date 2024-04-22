@@ -1061,7 +1061,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4206522943212223645, guid: 94ace71fbeef64940828835d60a4fa79, type: 3}
       propertyPath: m_CenterOfMass.z
-      value: -8
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 4219356000991277802, guid: 94ace71fbeef64940828835d60a4fa79, type: 3}
       propertyPath: m_Name
@@ -1746,6 +1746,7 @@ GameObject:
   - component: {fileID: 1301642832}
   - component: {fileID: 1301642834}
   - component: {fileID: 1301642835}
+  - component: {fileID: 1301642836}
   m_Layer: 0
   m_Name: central
   m_TagString: Untagged
@@ -1819,6 +1820,18 @@ MonoBehaviour:
   speedAR: -5
   canRoule: stop
   canRota: stop
+--- !u!114 &1301642836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301642831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1267fb4543f3cb4696bc639d2708c7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1843967623 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4219356000991277802, guid: 94ace71fbeef64940828835d60a4fa79, type: 3}

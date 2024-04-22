@@ -20,8 +20,12 @@ public class Running : MonoBehaviour
         public override Task<InstanceObjectResponse> InstanceObject(InstanceObjectRequest request, ServerCallContext context)
         {
             string message = $"instantiated object : {request.Object}.";
-            Debug.Log(message);
-            task.IC.Instanciate(request.Object);
+            Debug.Log(request.Object);
+            UnityMainThreadDispatcher.Instance().Enqueue(() =>
+            {
+                task.IC.Instantiate(request.Object);
+            });
+
             return Task.FromResult(new InstanceObjectResponse() { Message = message });
         }
         
@@ -45,7 +49,10 @@ public class Running : MonoBehaviour
         {
             string message = $"Cam moving on : {request.Distance}.";
             Debug.Log(message);
-            task.MoveCamCommand(request.Distance);
+            UnityMainThreadDispatcher.Instance().Enqueue(() =>
+            {
+                task.MoveCamCommand(request.Distance);
+            });
             return Task.FromResult(new MoveCamResponse() { Message = message });
         }
     }
@@ -70,8 +77,10 @@ public class Running : MonoBehaviour
     public void Start()
     {
         task = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Command>();
-        task.AC.RotateArticulation("axe1", 0);
         ServerStart prg = new ServerStart();
+        //task.IC.Instantiate("cube");
+
+        //task.AC.RotateArticulation("axe1", 1);
         prg.Run();
-    }
+    }   
 }
