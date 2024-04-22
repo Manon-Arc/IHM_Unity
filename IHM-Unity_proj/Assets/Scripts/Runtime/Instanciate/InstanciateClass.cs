@@ -25,11 +25,11 @@ public class InstanciateClass : MonoBehaviour
     public void Instantiate(string objectName)
     {
         Debug.Log("Attempting to instantiate: " + objectName);
+        
+        GameObject obj = GameObject.CreatePrimitive(Obj[objectName].Item1);
+        GameObject spawn = Obj[objectName].Item2;
     
-        GameObject obj = null;
-        GameObject spawn = null;
-    
-        switch (objectName.ToLower())
+        /*switch (objectName.ToLower())
         {
             case "cube":
                 Debug.Log("Instantiating cube...");
@@ -59,7 +59,7 @@ public class InstanciateClass : MonoBehaviour
         {
             Debug.LogError("Spawn point not assigned for " + objectName);
             return;
-        }
+        }*/
     
         Debug.Log("Object instantiated: " + obj);
         Debug.Log("Spawn point: " + spawn);
