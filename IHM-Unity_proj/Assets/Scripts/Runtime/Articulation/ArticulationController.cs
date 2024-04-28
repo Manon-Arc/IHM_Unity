@@ -12,6 +12,7 @@ public class ArticulationController : MonoBehaviour
     public ArticulationJointController pinceController;
     public ArticulationJointController pinceG;
     public ArticulationJointController pinceD;
+    public Grab GPince1;
 
     private void Awake()
     {
@@ -42,6 +43,7 @@ public class ArticulationController : MonoBehaviour
         {
             Obj["pinceD"].rotationState = RotationDirection.Negative;
             Obj["pinceG"].rotationState = RotationDirection.Positive;
+            GPince1.ReleaseObject();
         }
         else
         {

@@ -24,8 +24,6 @@ public class InstanciateClass : MonoBehaviour
 
     public void Instantiate(string objectName)
     {
-        Debug.Log("Attempting to instantiate: " + objectName);
-        
         GameObject obj = GameObject.CreatePrimitive(Obj[objectName].Item1);
         GameObject spawn = Obj[objectName].Item2;
     
@@ -61,11 +59,9 @@ public class InstanciateClass : MonoBehaviour
             return;
         }*/
     
-        Debug.Log("Object instantiated: " + obj);
-        Debug.Log("Spawn point: " + spawn);
-    
         obj.transform.position = spawn.transform.position;
         obj.AddComponent<Rigidbody>();
+        obj.tag = "ObjectToGrab";
     
         Debug.Log("Instantiation complete.");
     }

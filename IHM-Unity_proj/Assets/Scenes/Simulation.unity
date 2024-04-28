@@ -217,6 +217,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationState: 0
   speed: 40
+--- !u!114 &82392191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82392179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c913ee87971e3224ca3108f619aa1b23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  command: {fileID: 0}
+  ACloc: {fileID: 0}
 --- !u!1 &281509627
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,6 +596,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationState: 0
   speed: 40
+--- !u!114 &560647303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560647291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 801a39c7ad3d9d449a5f9d68b1bcfcae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pince2Contact: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -729,7 +756,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1310310801751013092, guid: 94ace71fbeef64940828835d60a4fa79, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1873124878569924399, guid: 94ace71fbeef64940828835d60a4fa79, type: 3}
       propertyPath: m_LocalScale.x
@@ -945,7 +972,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3220749727613424691, guid: 94ace71fbeef64940828835d60a4fa79, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3439912042508728362, guid: 94ace71fbeef64940828835d60a4fa79, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1014,6 +1041,10 @@ PrefabInstance:
     - target: {fileID: 4131679325363851241, guid: 94ace71fbeef64940828835d60a4fa79, type: 3}
       propertyPath: m_ArticulationJointType
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4131679325363851241, guid: 94ace71fbeef64940828835d60a4fa79, type: 3}
+      propertyPath: m_CollisionDetectionMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4131679325363851241, guid: 94ace71fbeef64940828835d60a4fa79, type: 3}
       propertyPath: m_ParentAnchorPosition.x
@@ -1170,6 +1201,10 @@ PrefabInstance:
     - target: {fileID: 4495598659826752408, guid: 94ace71fbeef64940828835d60a4fa79, type: 3}
       propertyPath: m_ArticulationJointType
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495598659826752408, guid: 94ace71fbeef64940828835d60a4fa79, type: 3}
+      propertyPath: m_CollisionDetectionMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4495598659826752408, guid: 94ace71fbeef64940828835d60a4fa79, type: 3}
       propertyPath: m_ParentAnchorPosition.x
@@ -1352,6 +1387,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6638985445977360561, guid: 94ace71fbeef64940828835d60a4fa79, type: 3}
+      propertyPath: m_CollisionDetectionMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638985445977360561, guid: 94ace71fbeef64940828835d60a4fa79, type: 3}
       propertyPath: m_ParentAnchorPosition.x
       value: 0.0011831131
       objectReference: {fileID: 0}
@@ -1479,9 +1518,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2673725042548332487, guid: 94ace71fbeef64940828835d60a4fa79, type: 3}
       insertIndex: -1
       addedObject: {fileID: 82392185}
+    - targetCorrespondingSourceObject: {fileID: 2673725042548332487, guid: 94ace71fbeef64940828835d60a4fa79, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 82392191}
     - targetCorrespondingSourceObject: {fileID: 5005421088795156332, guid: 94ace71fbeef64940828835d60a4fa79, type: 3}
       insertIndex: -1
       addedObject: {fileID: 560647297}
+    - targetCorrespondingSourceObject: {fileID: 5005421088795156332, guid: 94ace71fbeef64940828835d60a4fa79, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 560647303}
   m_SourcePrefab: {fileID: 100100000, guid: 94ace71fbeef64940828835d60a4fa79, type: 3}
 --- !u!1 &901396273 stripped
 GameObject:
@@ -1771,6 +1816,7 @@ MonoBehaviour:
   pinceController: {fileID: 901396275}
   pinceG: {fileID: 82392185}
   pinceD: {fileID: 560647297}
+  GPince1: {fileID: 560647303}
 --- !u!4 &1301642833
 Transform:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -79,8 +80,15 @@ public class Running : MonoBehaviour
         task = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Command>();
         ServerStart prg = new ServerStart();
         task.IC.Instantiate("cube");
-
-        //task.AC.RotateArticulation("axe1", 1);
         prg.Run();
-    }   
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown("space"))
+        {
+            Debug.Log("space pressed");
+            task.AC.PinceMove(true);
+        }
+    }
 }
