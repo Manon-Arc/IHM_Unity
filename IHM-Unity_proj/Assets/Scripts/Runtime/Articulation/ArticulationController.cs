@@ -32,14 +32,9 @@ public class ArticulationController : MonoBehaviour
         Obj[articulation].rotationState = direc;
     }
 
-    public void StopArticulation(string articulation)
-    {
-        Obj[articulation].rotationState = RotationDirection.None;
-    }
-
     public void PinceMove(bool move)
     {
-        if (move == true)
+        if (move)
         {
             Obj["pinceD"].rotationState = RotationDirection.Negative;
             Obj["pinceG"].rotationState = RotationDirection.Positive;

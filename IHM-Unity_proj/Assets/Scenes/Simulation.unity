@@ -466,7 +466,7 @@ Transform:
   m_GameObject: {fileID: 427628298}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0.5, z: 7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1032,7 +1032,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4131679325363851241, guid: 94ace71fbeef64940828835d60a4fa79, type: 3}
       propertyPath: m_XDrive.lowerLimit
-      value: -80
+      value: -40
       objectReference: {fileID: 0}
     - target: {fileID: 4131679325363851241, guid: 94ace71fbeef64940828835d60a4fa79, type: 3}
       propertyPath: m_XDrive.upperLimit
@@ -1196,7 +1196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4495598659826752408, guid: 94ace71fbeef64940828835d60a4fa79, type: 3}
       propertyPath: m_XDrive.upperLimit
-      value: 80
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4495598659826752408, guid: 94ace71fbeef64940828835d60a4fa79, type: 3}
       propertyPath: m_ArticulationJointType
@@ -1376,11 +1376,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6638985445977360561, guid: 94ace71fbeef64940828835d60a4fa79, type: 3}
       propertyPath: m_XDrive.lowerLimit
-      value: -80
+      value: -52.931103
       objectReference: {fileID: 0}
     - target: {fileID: 6638985445977360561, guid: 94ace71fbeef64940828835d60a4fa79, type: 3}
       propertyPath: m_XDrive.upperLimit
-      value: 80
+      value: 55.49857
       objectReference: {fileID: 0}
     - target: {fileID: 6638985445977360561, guid: 94ace71fbeef64940828835d60a4fa79, type: 3}
       propertyPath: m_ArticulationJointType
@@ -1860,8 +1860,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bot: {fileID: 1843967623}
-  rotateSpeedG: 10
-  rotateSpeedD: -10
   speedAV: 5
   speedAR: -5
   canRoule: stop
@@ -1922,7 +1920,7 @@ Transform:
   m_GameObject: {fileID: 1919383833}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: 0.5, z: -7}
+  m_LocalPosition: {x: 10, y: 0.5, z: 7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

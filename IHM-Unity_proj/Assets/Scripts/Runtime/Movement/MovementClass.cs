@@ -6,8 +6,8 @@ public class MovementClass : MonoBehaviour
 {
     public GameObject bot;
     
-    public float rotateSpeedG = 10f;
-    public float rotateSpeedD = -10f;
+    private float rotateSpeedG = -10f;
+    private float rotateSpeedD = 10f;
 
     public float speedAV = 5f;
     public float speedAR = -5f;

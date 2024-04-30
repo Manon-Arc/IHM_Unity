@@ -17,6 +17,13 @@ public class Running : MonoBehaviour
             task.MC.MoveBot(request.Dir);
             return Task.FromResult(new MoveBotResponse() { Message = message });
         }
+        public override Task<RotaBotResponse> RotaBot(RotaBotRequest request, ServerCallContext context)
+        {
+            string message = $"Moving in the {request.Dir} direction.";
+            Debug.Log(message);
+            task.MC.RotaBot(request.Dir);
+            return Task.FromResult(new RotaBotResponse() { Message = message });
+        }
         
         public override Task<InstanceObjectResponse> InstanceObject(InstanceObjectRequest request, ServerCallContext context)
         {
@@ -79,7 +86,6 @@ public class Running : MonoBehaviour
     {
         task = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Command>();
         ServerStart prg = new ServerStart();
-        task.IC.Instantiate("cube");
         prg.Run();
     }
 
