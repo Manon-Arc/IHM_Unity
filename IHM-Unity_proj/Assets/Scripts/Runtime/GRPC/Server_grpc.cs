@@ -88,13 +88,4 @@ public class Running : MonoBehaviour
         ServerStart prg = new ServerStart();
         prg.Run();
     }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown("space"))
-        {
-            Debug.Log("space pressed");
-            task.AC.PinceMove(true);
-        }
-    }
 }

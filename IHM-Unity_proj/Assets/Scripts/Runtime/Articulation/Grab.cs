@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Grab : MonoBehaviour
@@ -8,7 +9,7 @@ public class Grab : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        /*Debug.Log("collision");
+        Debug.Log("collision");
         if (collision.collider.CompareTag("ObjectToGrab") && Pince2Contact && !isObjectGrabbed)
         {
             Debug.Log("in col");
@@ -18,10 +19,15 @@ public class Grab : MonoBehaviour
 
             objectToGrab.transform.parent = transform;
             isObjectGrabbed = true;
-        }*/
+        }
     }
 
     public void ReleaseObject()
+    {
+        StartCoroutine(ReleaseWithDelay());
+    }
+
+    IEnumerator ReleaseWithDelay()
     {
         Debug.Log("on release");
         if (isObjectGrabbed)
@@ -30,6 +36,7 @@ public class Grab : MonoBehaviour
             objectToGrab.isKinematic = false;
             objectToGrab = null;
             isObjectGrabbed = false;
+            yield return new WaitForSeconds(2f);
         }
     }
 }
