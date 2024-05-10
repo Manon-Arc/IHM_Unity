@@ -21,7 +21,7 @@ This repository contains the Unity server of the [IHM project](https://github.co
 ```bash
 netsh advfirewall set allprofiles state off
 ```
-Or add a rule to autorized the TCP trafic on the port 50051 of your computer :
+Or add a rule to autorized the TCP trafic on the port 50051 of your computer : <br>
 [Check documentation here !](https://www.malekal.com/comment-ouvrir-port-pare-feu-windows-defender/)
 
 ### 2. Lauch :
