@@ -2,11 +2,25 @@
 
 This repository contains the Unity server of the [IHM project](https://github.com/Manon-Arc/projetDev_IHM).
 
-## 🔧 I. Prerequisites :
+## 📌 Table of Contents :
+   
+I. [Badges](#🎯-badges)
+
+II. [Prerequisites](#🔧-prerequisites-)
+
+III. [Installation](#💻-how-to-install-the-project-)
+
+## 🎯 Badges :
+
+[![Csharp logo](https://img.shields.io/badge/Language-CSharp-green)](https://learn.microsoft.com/fr-fr/dotnet/csharp/)
+[![Unity logo](https://img.shields.io/badge/Software-Unity-black)](https://unity.com/fr/)
+
+
+## 🔧 Prerequisites :
 
 - [Unity](https://unity.com/fr/download) installed on your system.
 
-## 💻 II. How to Install the Project :
+## 💻 How to Install the Project :
 
 ### 1. Installation :
 
