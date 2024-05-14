@@ -38,6 +38,7 @@ public class ArticulationController : MonoBehaviour
         {
             Obj["pinceD"].rotationState = RotationDirection.Negative;
             Obj["pinceG"].rotationState = RotationDirection.Positive;
+            Debug.Log("mouve open");
             GPince1.ReleaseObject();
         }
         else

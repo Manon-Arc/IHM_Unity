@@ -11,9 +11,7 @@ public class GrabByPince2 : MonoBehaviour
     private void Start()
     {
         command = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Command>();
-        Debug.Log(command);
         ACloc = command.AC;
-        Debug.Log(ACloc);
     }
 
     private void OnCollisionEnter(Collision collision)

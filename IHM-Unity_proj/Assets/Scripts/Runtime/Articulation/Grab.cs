@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -6,6 +7,15 @@ public class Grab : MonoBehaviour
     private bool isObjectGrabbed = false;
     private Rigidbody objectToGrab;
     public bool Pince2Contact = false;
+    public Command command;
+    public ArticulationController ACloc;
+
+
+    private void Start()
+    {
+        command = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Command>();
+        ACloc = command.AC;
+    }
 
     void OnCollisionEnter(Collision collision)
     {
@@ -24,10 +34,11 @@ public class Grab : MonoBehaviour
 
     public void ReleaseObject()
     {
+        Debug.Log("release first");
         StartCoroutine(ReleaseWithDelay());
     }
 
-    IEnumerator ReleaseWithDelay()
+    public IEnumerator ReleaseWithDelay()
     {
         Debug.Log("on release");
         if (isObjectGrabbed)
@@ -36,6 +47,7 @@ public class Grab : MonoBehaviour
             objectToGrab.isKinematic = false;
             objectToGrab = null;
             isObjectGrabbed = false;
+            ACloc.GPince1.Pince2Contact = false;
             yield return new WaitForSeconds(2f);
         }
     }
